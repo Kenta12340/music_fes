@@ -1,0 +1,23 @@
+{% extends "musicfes_app/base.html" %}
+{% block content %}
+    <div class="home-content wrapper list-content">
+        <ul>
+            <div class="list-mragin">
+            <li>イベント名</li>
+            <li>Yokohama Music Festival</li>
+            </div>
+            <div class="list-mragin">
+            <li>開催場所</li>
+            <li>神奈川アリーナ</li>
+            </div>
+            <div class="list-mragin">
+            <li>開催日時</li>
+            <li>〇月〇日 〇〇：〇〇～〇〇：〇〇</li>
+        </div>
+            <div class="list-mragin">
+            <li>料金</li>
+            <li><a href="{% url 'tiket' %}">詳細はこちら</a></li>
+        </div>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+}
+.headerpage{
+    display: flex;
+    margin-bottom: 40px;
+}
+a{
+    text-decoration: none;
+}
+.main-nav{
+  list-style:none;  
+  display: flex;
+  justify-content: space-between;
+}
+.main-nav li{
+    text-align: center;
+    width: 8rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+.main-nav li a{
+    color: white;
+}
+.main-nav li a:hover{
+    color: rgb(130, 134, 255);
+}
+img{
+    max-width: 40%;
+}
+.log{
+    width: 210px;
+    margin-left: 0 auto;
+}
+#home{
+    margin: 0;
+    background-image: url('../../../../media/image/TOP-1.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.home-content{
+    text-align: center;
+}
+.page-title{
+    margin-top: 170px;
+    font-size:6rem;
+    color: white;
+    -webkit-text-stroke: 1px rgb(177, 176, 176);
+}
+.button{
+    font-size: 1.35rem;
+    color: white;
+    background-color: blue;
+    padding: 10px 20px;
+    border-radius: 5%;
+}
+.button:hover{
+    background-color: rgb(4, 4, 179);
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.list-content ul li{
+    list-style: none;
+    font-size: 1.8em;
+    color: white;
+    -webkit-text-stroke: 0.5px rgb(65, 65, 65);
+}
+.list-mragin{
+    margin-bottom: 30px;
+}
+
+.table{ 
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.tiket-table{
+    width: 450px;
+}
+.tiket-table th,td{
+    height: 70px;
+}
+
+.form-table{
+    width: 550px;
+}
+.form-table th,td{
+    height: 30px;
+}
+
+table{
+    width: 40%;
+    height: 60px;
+    border-collapse:  collapse;
+}
+td,th{
+    
+    border:1px black solid;
+    border-collapse: collapse;
+    background-color: white;
+}
+th{
+    background-color: rgb(225, 225, 225);
+}

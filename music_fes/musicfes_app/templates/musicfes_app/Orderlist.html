@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="container">
+    <h1>予約一覧</h1>
+    <table class="table">
+    <tr>
+        <th>氏名</th>
+        <th>チケットグレード</th>
+        <th>住所</th>
+        <th>電話番号</th>
+    </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{item.name}}</td>
+           <td>{{item.sheets}}</td>
+            <td>{{item.phone_number}}</td>
+            <td>{{item.adress}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <ul class="pagination  justify-content-center">
+        {% if data.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="{% url 'Orderlist' %}">
+                &laquo; first</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" 
+            href="{% url 'Orderlist' %}{{data.previous_page_number}}">
+                &laquo; prev</a>
+        </li>
+        {% else %}
+        <li class="page-item">
+            <a class="page-link">&laquo; first</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link">&laquo; prev</a>
+        </li>
+        {% endif %}
+        <li class="page-item">
+            <a class="page-link">
+            {{data.number}}/{{data.paginator.num_pages}}</a>
+        </li>
+        {% if data.has_next %}
+        <li class="page-item">
+            <a class="page-link" 
+            href="{% url 'Orderlist' %}{{data.next_page_number }}">
+                next &raquo;</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" 
+            href="{% url 'Orderlist' %}{{data.paginator.num_pages}}">
+                last &raquo;</a>
+        </li>
+        {% else %}
+        <li class="page-item">
+            <a class="page-link">next &raquo;</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link">last &raquo;</a>
+        </li>
+        {% endif %}
+    </ul>
+</body>
+</html>

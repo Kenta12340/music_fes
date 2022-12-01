@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'musicfes_app/css/style.css' %}">
+    <link rel="icon" type="image/png" href="../../../media/image/YMFicon.png">
+    <title>Yokohama Music Festival</title>
+</head>
+<body>
+    <div id="home">
+    <header class="headerpage wrapper">
+        <h1><a href="/"><img src="../../../media/image//YMF.png" alt="横浜音楽フェスティバル"></a></h1>
+        <ul class="main-nav">
+            <li><a href="{% url 'info' %}">イベント情報</a></li>
+            <li><a href="{% url 'tiket' %}">チケット</a></li>
+            <li><a href="{% url 'access' %}">アクセス</a></li>
+        </ul>
+    </header>
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>
